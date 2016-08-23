@@ -1,5 +1,5 @@
 # Password
-Password final
+Password Final
 
 Passwords are to argue one of the most important things to all people of the world. Security is a tool we use to protect ourselves from people whom wish to harm us by accessing these accounts. This program shows password structure. 
 
