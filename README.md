@@ -8,11 +8,8 @@ Passwords are to argue one of the most important things to all people of the wor
 
 Code Example:
 
-while(username.length()<8 || username.length()>=8 )
-    {
-
-   bool userMatch=false;
-    while(username.length()!=8 || userMatch == false)
+ bool wordMatch=false;
+    while(password.length()!=8 || wordMatch == false)
     {
 
         cout<<"Enter Your Username(Numbers/Letters):";
