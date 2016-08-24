@@ -4,97 +4,90 @@
 using namespace std;
 
 int main()
-{//Username and Password.Also passcode.
-    const string Username="us3rnam3";
-    const string Password="12345678";
-    const string Passcode="87654321";
+{
+
+
     //strings in which user will enter username and password
     string username,password,passcode;
 
+    //arrays
+    string login [3][3]={{"tntuser1","23456789","98765432"},
+                            {"tntuser2","34567890""09876543"},
+                            {"tntuser3","45678901""10987654"}};
 
 
-
-	// Prompting user to input username
-    while(username.length()<8 || username.length()>=8 )
+    bool userMatch=false;
+    while(username.length()!=8 || userMatch == false)
     {
 
-    cout<<"Enter Your Username(Numbers/Letters):\n";
-    cin>>username;
+        cout<<"Enter Your Username(Numbers/Letters):";
+        cin>>username;
 
-        if(username == "us3rnam3")
+        int x;
+        for(x=0;x<4;x++)
         {
-
-            cout<<"Enter Password(Numbers/Letters):";
-            cin>>password;
-            break;
-
-        }
-        else
-        {
-             cout <<"Username incorrect.Please try again\n";
-        }
-    }
-
-
-
-		//promprting user for password
-    while(password.length()<8 || password.length()>=8 )
-    {
-            if(password == "12345678" )
+            if(username == login[x][0])
             {
-               if(username==Username&&password==Password);
-                {
+                userMatch=true;
 
-                    cout<<"Welcome, almost done, we need some more information to make sure you are secure."<<endl;
-                    break;
-                }
 
             }
 
-            else
-            {
-                 cout<<"Password incorrect.Please Re-enter\n";
+        }
+        if (userMatch==false)
+        {
+            cout<< "Username Not Found, Try Again:\n";
+        }
 
-                    cout<<"Enter Password(Numbers/Letters):";
-                    cin>>password;
+    }
+
+    bool wordMatch=false;
+    while(password.length()!=8 || wordMatch == false)
+    {
+
+        cout<<"Enter Your Password(Numbers):";
+        cin>>password;
+        int y;
+        for( y=0;y<4;y++)
+        {
+            if(password == login[y][1])
+            {
+                wordMatch=true;
 
 
             }
+
+        }
+        if (wordMatch==false)
+        {
+            cout<< "Password Not Found, Try Again:\n";
+        }
+
     }
-    		//promprting user for passcode
-    while(passcode.length()<8 || passcode.length()>=8 )
+
+    bool codeMatch=false;
+    while(passcode.length()!=8 || codeMatch == false)
     {
-        cout<<" Enter Your Passcode(Numbers):\n";
+
+        cout<<"Enter Your Passcode(Numbers):";
         cin>>passcode;
-
-        if(passcode == "87654321")
+        int z;
+        for(z=0;z<4;z++)
         {
-            if(passcode==Passcode);
+            if(passcode == login[z][2])
             {
+                codeMatch=true;
 
-            cout <<"Welcome!\n"<<endl;
-            break;
 
             }
+
         }
-        else
+        if (userMatch==false)
         {
-            cout <<"Passcode incorrect.One last attempt. \n";
-            cout<<"Enter Passcode(Numbers):";
-            cin>>passcode;
-
-
+            cout<< "Username Not Found, Try Again:\n";
         }
-
-
 
     }
-
-
-
-
-
-
             system("Pause");
             return 0;
 
