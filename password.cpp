@@ -12,8 +12,8 @@ int main()
 
     //arrays
     string login [3][3]={{"tntuser1","23456789","98765432"},
-                            {"tntuser2","34567890""09876543"},
-                            {"tntuser3","45678901""10987654"}};
+                            {"tntuser2","34567890","09876543"},
+                            {"tntuser3","45678901","10987654"}};
 
 
     bool userMatch=false;
